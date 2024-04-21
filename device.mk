@@ -11,6 +11,10 @@ $(call inherit-product, device/xiaomi/sm8650-common/common.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/houji/houji-vendor.mk)
 
+# Euicc
+PRODUCT_PACKAGES += \
+    XiaomiEuicc
+
 # Powershare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.default
