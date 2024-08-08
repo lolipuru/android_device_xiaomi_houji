@@ -1,0 +1,11 @@
+# Bluetooth
+bluetooth.device.default_name=Xiaomi 14
+
+# Display
+ro.vendor.touchfeature.type=247
+
+# Marketname
+ro.product.marketname=Xiaomi 14
+
+# USB
+vendor.usb.product_string=Xiaomi 14
