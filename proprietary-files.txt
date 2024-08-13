@@ -1403,6 +1403,10 @@ odm/etc/disp0/mdss_dsi_n3_42_0d_0a_dsc_cmd/miLutInfo.txt
 odm/etc/display/qdcm_calib_data_xiaomi_n3_42_0d_0a_cmd_mode_dsc_dsi_panel.json
 odm/etc/mdss_dsi_n3_42_0d_0a_dsc_cmd_mi.xml
 
+# Fingerprint
+odm/lib64/hw/fingerprint.goodix_fod.so
+odm/lib64/libgf_hal.so
+
 # RIL
 odm/etc/me_config.xml
 
