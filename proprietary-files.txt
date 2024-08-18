@@ -2,8 +2,6 @@
 ## are from Xiaomi 14 (OS1.0.12.0.UNCMIXM)
 
 # ACDB
-odm/etc/acdbdata/Tutu_orange/Tutu_orange_acdb_cal.acdb:odm/etc/acdbdata/pineapple_mtp/Tutu_orange_acdb_cal.acdb
-odm/etc/acdbdata/Tutu_orange/Tutu_orange_workspaceFileXml.qwsp:odm/etc/acdbdata/pineapple_mtp/Tutu_orange_workspaceFileXml.qwsp
 odm/etc/acdbdata/Tutu/Tutu_acdb_cal.acdb:odm/etc/acdbdata/pineapple_mtp/Tutu_acdb_cal.acdb
 odm/etc/acdbdata/Tutu/Tutu_workspaceFileXml.qwsp:odm/etc/acdbdata/pineapple_mtp/Tutu_workspaceFileXml.qwsp
 
