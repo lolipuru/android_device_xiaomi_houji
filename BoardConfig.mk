@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(KERNEL_PATH)/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/6.1.25-android14-11-g9f6af9a6c2cc-ab11205628)
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := houji
+TARGET_OTA_ASSERT_DEVICE := houji,houjiin
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
