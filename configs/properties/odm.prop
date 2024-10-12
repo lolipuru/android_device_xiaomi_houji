@@ -2,8 +2,25 @@
 bluetooth.device.default_name=Xiaomi 14
 
 # Display
-ro.vendor.touchfeature.type=247
+vendor.display.enable_qsync_timer=1
 vendor.display.enable_spr=1
+ro.vendor.whitepoint_calibration_enable=false
+ro.vendor.touchfeature.type=247
+ro.vendor.mi_sf.supported_automode_maxfps_list=120
+ro.vendor.mi_sf.support_automode_for_normalfps=false
+ro.vendor.mi_sf.qsync_support=true
+ro.vendor.mi_sf.qsync_support_min_fps_range=10,60
+ro.vendor.mi_sf.gallery_p3_dolby_opt=true
+ro.vendor.display.primary_idle_refresh_rate=10,10:528
+ro.vendor.display.dobly_dpu.enable=true
+ro.vendor.dfps.enable=false
+persist.vendor.disable_idle_fps=false
+persist.vendor.disable_idle_fps.threshold=0
+persist.sys.miui_resolution=1200,2670,480
+
+# Fingerprint
+persist.vendor.sys.fp.fod.location.X_Y=491,2282
+persist.vendor.sys.fp.fod.size.width_height=218,218
 
 # Marketname
 ro.product.marketname=Xiaomi 14
