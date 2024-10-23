@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- An array of device capabilities defined by GSMA SGP.22 v2.0.
+         The first item is the capability name that the device supports. The second item is the
+         major version. The minor and revision versions are default to 0s.
+         The device capabilities and their definition in the spec are:
+             gsm : gsmSupportedRelease
+             utran : utranSupportedRelease
+             cdma1x : cdma2000onexSupportedRelease
+             hrpd : cdma2000hrpdSupportedRelease
+             ehrpd : cdma2000ehrpdSupportedRelease
+             eutran : eutranSupportedRelease
+             nfc : contactlessSupportedRelease
+             crl : rspCrlSupportedVersion
+             nrepc : nrEpcSupportedRelease
+             nr5gc : nr5gcSupportedRelease
+             eutran5gc : eutran5gcSupportedRelease
+    -->
+    <string-array name="config_telephonyEuiccDeviceCapabilities">
+        <item>gsm,8</item>
+        <item>utran,9</item>
+        <item>eutran,15</item>
+    </string-array>
+</resources>

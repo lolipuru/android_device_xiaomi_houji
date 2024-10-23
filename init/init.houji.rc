@@ -1,0 +1,8 @@
+# Copyright (C) 2022-2023 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Euicc
+on post-fs && property:ro.boot.hwc=CN
+    # Remove euicc stuffs on CN Variant
+    mount none /dev/null /odm/overlay/HoujiEuiccOverlay.apk bind

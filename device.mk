@@ -15,6 +15,10 @@ $(call inherit-product, vendor/xiaomi/houji/houji-vendor.mk)
 PRODUCT_PACKAGES += \
     XiaomiEuicc
 
+# init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.houji.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.houji.rc \
+
 # Powershare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.default
@@ -26,4 +30,5 @@ PRODUCT_SOONG_NAMESPACES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResHouji \
+    HoujiEuiccOverlay \
     SystemUIResHouji
