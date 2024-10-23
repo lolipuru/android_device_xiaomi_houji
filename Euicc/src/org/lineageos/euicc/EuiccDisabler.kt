@@ -41,9 +41,9 @@ object EuiccDisabler {
     fun enableOrDisableEuicc(context: Context) {
         val pm = context.packageManager
         val sku = SystemProperties.get("ro.boot.product.hardware.sku")
-        val disable = if (sku == "IN" || sku == "CN") {
-            Log.d(TAG, "Disabling apps due to IN or CN SKU")
-            true // Disable if SKU is IN or CN
+        val disable = if (sku == "CN") {
+            Log.d(TAG, "Disabling apps due to China SKU")
+            true // Disable if SKU is CN
         } else {
             EUICC_DEPENDENCIES.any { !isInstalledAndEnabled(pm, it) }
         }
