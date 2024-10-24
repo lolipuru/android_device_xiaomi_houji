@@ -19,8 +19,8 @@ persist.vendor.disable_idle_fps.threshold=0
 persist.sys.miui_resolution=1200,2670,480
 
 # Fingerprint
-persist.vendor.sys.fp.fod.location.X_Y=491,2282
-persist.vendor.sys.fp.fod.size.width_height=218,218
+persist.vendor.fingerprint.type=udfps_optical
+persist.vendor.fingerprint.sensor_location=491|2282|109
 
 # Marketname
 ro.product.marketname=Xiaomi 14
