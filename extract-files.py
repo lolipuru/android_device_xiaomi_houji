@@ -4,22 +4,16 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import extract_utils.tools
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
 )
-
 from extract_utils.fixups_lib import (
     lib_fixup_remove,
-    lib_fixup_remove_arch_suffix,
-    lib_fixup_remove_proto_version_suffix,
-    lib_fixup_vendorcompat,
+    lib_fixups,
     lib_fixups_user_type,
-    libs_clang_rt_ubsan,
-    libs_proto_3_9_1,
-    libs_proto_21_12,
 )
-
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
