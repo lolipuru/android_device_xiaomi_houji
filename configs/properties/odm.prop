@@ -21,6 +21,7 @@ persist.sys.miui_resolution=1200,2670,480
 # Fingerprint
 persist.vendor.fingerprint.type=udfps_optical
 persist.vendor.fingerprint.sensor_location=600|2282|109
+persist.vendor.fingerprint.sensor_modules=goodix_fod
 
 # Marketname
 ro.product.marketname=Xiaomi 14
