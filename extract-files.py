@@ -33,6 +33,16 @@ namespace_imports = [
     'vendor/xiaomi/sm8650-common',
 ]
 
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}-{partition}' if partition == 'vendor' else None
+
+lib_fixups: lib_fixups_user_type = {
+    (
+        'android.hardware.graphics.composer3-V1-ndk',
+        'android.hardware.graphics.allocator-V1-ndk',
+    ): lib_fixup_remove,
+}
+
 blob_fixups: blob_fixups_user_type = {
     (
         'odm/etc/camera/enhance_motiontuning.xml',
