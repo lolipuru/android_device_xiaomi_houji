@@ -39,8 +39,8 @@ odm/lib/rfsa/adsp/libmiphone_capture_mdbokeh_cdsp_skel.so
 odm/lib/rfsa/adsp/libmlawbpostproc_dsp_skel.so
 odm/lib/rfsa/adsp/libQnnHtpV75Skel.so
 odm/lib/rfsa/adsp/libQnnHtpV75.so
-odm/lib/rfsa/adsp/libQnnSaver.so
-odm/lib/rfsa/adsp/libQnnSystem.so
+odm/lib/rfsa/adsp/libQnnSaver.so;MODULE_SUFFIX=_adsp
+odm/lib/rfsa/adsp/libQnnSystem.so;MODULE_SUFFIX=_adsp
 odm/lib/rfsa/adsp/libSnpeHtpV75Skel.so
 odm/lib64/rfs/dsp/libapn_dsp_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libapn_dsp_skel.so
 odm/lib64/rfs/dsp/libbitml_nsp_75na_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libbitml_nsp_75na_skel.so
