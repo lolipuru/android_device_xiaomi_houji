@@ -15,6 +15,7 @@ odm/etc/audio/misound_res_spk_power_game.bin
 odm/etc/audio/misound_res_spk_power_sva.bin
 odm/etc/audio/misound_res_spk_power_video.bin
 odm/etc/audio/misoundsa_spk_config.bin
+odm/lib/rfsa/adsp/libadsp_jpege_skel.so
 odm/lib/rfsa/adsp/libaisupernight_cdsp_skel.so
 odm/lib/rfsa/adsp/libaisupernight_ellc_cdsp_skel.so
 odm/lib/rfsa/adsp/libarcsoft_beauty_hvx_skel.so
@@ -127,6 +128,11 @@ vendor/lib64/rfs/dsp/libvpp_svc_skel.so
 vendor/lib64/rfs/dsp/libvpp_vqa_networks.so
 vendor/lib64/rfs/dsp/libvpt_action_recognition.so
 vendor/lib64/rfs/dsp/libworker_pool.so
+vendor/lib64/se_algo/libQnnHtp.so;MODULE_SUFFIX=_xiaomi
+vendor/lib64/se_algo/libQnnHtpNetRunExtensions.so;MODULE_SUFFIX=_xiaomi
+vendor/lib64/se_algo/libQnnHtpV75Skel.so;MODULE_SUFFIX=_xiaomi
+vendor/lib64/se_algo/libQnnHtpV75Stub.so;MODULE_SUFFIX=_xiaomi
+vendor/lib64/se_algo/libQnnSystem.so;MODULE_SUFFIX=_xiaomi
 
 # Audio (Config)
 odm/etc/audio/sku_pineapple/mixer_paths_overlay_static.xml
@@ -160,41 +166,7 @@ odm/lib64/vendor.xiaomi.hardware.bgservice@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.aon-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.quickcamera-V1-ndk.so
 
-# Camera
-odm/etc/camera/102_SummerDay.png
-odm/etc/camera/103_Fantasy.png
-odm/etc/camera/104_Meet.png
-odm/etc/camera/105_WindSing.png
-odm/etc/camera/106_Lost.png
-odm/etc/camera/107_Central.png
-odm/etc/camera/108_NorthernEurope.png
-odm/etc/camera/109_Rome.png
-odm/etc/camera/110_BlackGold.png
-odm/etc/camera/111_GreenOrange.png
-odm/etc/camera/112_CyberPunk.png
-odm/etc/camera/113_BlackIce.png
-odm/etc/camera/121_Bleach.png
-odm/etc/camera/122_Thriller.png
-odm/etc/camera/123_TealOrange.png
-odm/etc/camera/124_JapaneseStyle.png
-odm/etc/camera/125_Latin.png
-odm/etc/camera/126_Fantasy2.png
-odm/etc/camera/127_Creamy.png
-odm/etc/camera/128_Sepia.png
-odm/etc/camera/129_Vivid.png
-odm/etc/camera/130_Natural.png
-odm/etc/camera/131_Monochrome.png
-odm/etc/camera/132_MonochromeHighContrast.png
-odm/etc/camera/133_MonochromeBrown.png
-odm/etc/camera/134_MonochromeBlue.png
-odm/etc/camera/135_Classical.png
-odm/etc/camera/136_Filene.png
-odm/etc/camera/137_GreenNight.png
-odm/etc/camera/138_LiteratureAndArt.png
-odm/etc/camera/139_OrangeHoney.png
-odm/etc/camera/140_Romance.png
-odm/etc/camera/141_FR500.png
-odm/etc/camera/142_FE250.png
+# Camera Resources
 odm/etc/camera/af_class_all.dlc
 odm/etc/camera/af_class_human.dlc
 odm/etc/camera/af_classify.dlc
@@ -921,6 +893,30 @@ odm/etc/camera/snsc.bin
 odm/etc/camera/snsc_params.json
 odm/etc/camera/ultrazoom.bin
 odm/etc/camera/ultrazoom_moon.bin
+odm/etc/camera/videofilter/110_BlackGold.png
+odm/etc/camera/videofilter/129_LeicaVivid.png
+odm/etc/camera/videofilter/130_LeicaNatural.png
+odm/etc/camera/videofilter/131_MonochromeTrue.png
+odm/etc/camera/videofilter/132_MonochromeHighContrast.png
+odm/etc/camera/videofilter/133_MonochromeBrown.png
+odm/etc/camera/videofilter/134_MonochromeBlue.png
+odm/etc/camera/videofilter/144_RedHero.png
+odm/etc/camera/videofilter/146_TactileGreen.png
+odm/etc/camera/videofilter/148_Mild.png
+odm/etc/camera/videofilter/149_LilyWhite.png
+odm/etc/camera/videofilter/150_Bright.png
+odm/etc/camera/videofilter/151_Fresh.png
+odm/etc/camera/videofilter/152_Limpid.png
+odm/etc/camera/videofilter/153_KC64.png
+odm/etc/camera/videofilter/154_V250.png
+odm/etc/camera/videofilter/155_H400.png
+odm/etc/camera/videofilter/156_ColdWhite.png
+odm/etc/camera/videofilter/157_Native.png
+odm/etc/camera/videofilter/158_BWClassical.png
+odm/etc/camera/videofilter/159_Flowers.png
+odm/etc/camera/videofilter/160_Vivid.png
+odm/etc/camera/videofilter/161_KP160.png
+odm/etc/camera/videofilter/162_Natural.png
 odm/etc/camera/VideoNight4K/ellv.bin
 odm/etc/camera/VideoNight4K/ellv_params.xml
 odm/etc/camera/video_stabilizer_moon.xml
@@ -938,6 +934,7 @@ odm/etc/camera/xiaomi/frontbokehsnapshot.json
 odm/etc/camera/xiaomi/frontsinglesnapshot.json
 odm/etc/camera/xiaomi/frontsupernightsnapshotjpeg.json
 odm/etc/camera/xiaomi/frontsupernightsnapshot.json
+odm/etc/camera/xiaomi/leicasnapshot.json
 odm/etc/camera/xiaomi/manualsnapshot.json
 odm/etc/camera/xiaomi/manualultrarawsnapshot.json
 odm/etc/camera/xiaomi/miuicamerayuv2heic.json
@@ -969,6 +966,8 @@ odm/lib64/camera/camxfl115indices.bin
 odm/lib64/camera/camxfl300v1indices.bin
 odm/lib64/camera/camxfl300v2indices.bin
 odm/lib64/camera/camxflcustom300indices.bin
+
+# Camera Components
 odm/lib64/camera/components/com.jigan.node.videobokeh.so;DISABLE_CHECKELF
 odm/lib64/camera/components/com.mi.node.aiasd.so;DISABLE_CHECKELF
 odm/lib64/camera/components/com.mi.node.dlengine.so;DISABLE_CHECKELF
@@ -991,6 +990,7 @@ odm/lib64/camera/components/com.qti.hvx.binning.so
 odm/lib64/camera/components/com.qti.hwcfg.bps.so
 odm/lib64/camera/components/com.qti.hwcfg.ife.so
 odm/lib64/camera/components/com.qti.hwcfg.ipe.so
+odm/lib64/camera/components/com.qti.node.afbfusion.so
 odm/lib64/camera/components/com.qti.node.aon.so;DISABLE_CHECKELF
 odm/lib64/camera/components/com.qti.node.customhwnode.so
 odm/lib64/camera/components/com.qti.node.depthprovider.so;DISABLE_CHECKELF
@@ -1069,6 +1069,8 @@ odm/lib64/camera/components/libcamxevainterface.so;DISABLE_CHECKELF
 odm/lib64/camera/components/libdepthmapwrapper_itof.so;DISABLE_CHECKELF
 odm/lib64/camera/components/libdepthmapwrapper_secure.so;DISABLE_CHECKELF
 odm/lib64/camera/components/libstats.aipdlib.so
+
+# Camera Sensormodules
 odm/lib64/camera/com.qti.actuator.houji_ofilm_s5kjn1_gt9764v_tele_actuator.so;DISABLE_CHECKELF
 odm/lib64/camera/com.qti.actuator.houji_sunny_ovx9000_ak7316_wide_actuator.so;DISABLE_CHECKELF
 odm/lib64/camera/com.qti.actuator.houji_sunny_ovx9000_ak7316_wide_ii_actuator.so;DISABLE_CHECKELF
@@ -1102,6 +1104,14 @@ odm/lib64/camera/fdconfigsecure.bin
 odm/lib64/camera/fdconfigvideo.bin
 odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/camera/libchxlogicalcameratable.so;DISABLE_CHECKELF
+
+# camera sensormodule (china variant)
+odm/lib64/camera/com.qti.sensormodule.houji_sunny_ovx9000_wide_ii.bin
+odm/lib64/camera/com.qti.sensormodule.houji_sunny_s5kjn1_tele_ii.bin
+odm/lib64/camera/com.qti.tuned.houji_sunny_ovx9000_wide_ii.bin
+odm/lib64/camera/com.qti.tuned.houji_sunny_s5kjn1_tele_ii.bin
+
+# Camera Plugins
 odm/lib64/camera/plugins/com.xiaomi.plugin.anchor.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.arcsoftportraitsll.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.arcsoftrawhdr.so
@@ -1130,6 +1140,8 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.sr.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.supermoon.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.swflip.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.tsskinbeautifier.so
+
+# Camera ODM
 odm/lib64/camx.device-impl.so
 odm/lib64/camx.provider-impl.so
 odm/lib64/com.qti.camx.chiiqutils.so;DISABLE_CHECKELF
@@ -1213,7 +1225,8 @@ odm/lib64/libcamera_scene.so
 odm/lib64/libcamerapostproc.so;DISABLE_CHECKELF
 odm/lib64/libcamlog.so
 odm/lib64/libcamxcommonutils.so
-odm/lib64/libcamxexternalformatutils.so:vendor/lib64/libcamxexternalformatutils.so
+odm/lib64/libcamxexternalformatutils.so
+odm/lib64/libcamxexternalformatutils.so:vendor/lib64/libcamxexternalformatutils.so;MODULE_SUFFIX=_vendor
 odm/lib64/libcamxfdengine.so
 odm/lib64/libcamxhwnodecontext.so;DISABLE_CHECKELF
 odm/lib64/libcamxifestriping.so;DISABLE_CHECKELF
@@ -1250,6 +1263,7 @@ odm/lib64/libhis_face_tracking.so
 odm/lib64/libHISCppAlgos.so
 odm/lib64/libhme.so;DISABLE_CHECKELF
 odm/lib64/libhta_hexagon_runtime_snpe.so
+odm/lib64/libiccprofile.so
 odm/lib64/libIntelligentFocus.so
 odm/lib64/libipebpsstriping.so;DISABLE_CHECKELF
 odm/lib64/libipebpsstriping170.so;DISABLE_CHECKELF
@@ -1340,8 +1354,10 @@ odm/lib64/libSnpeHtpV68Stub.so
 odm/lib64/libSnpeHtpV69Stub.so
 odm/lib64/libSnpeHtpV73Stub.so
 odm/lib64/libSnpeHtpV75Stub.so
+odm/lib64/libsfeShiftExtrapolation.so
 odm/lib64/libsnpe_config.so;DISABLE_CHECKELF
 odm/lib64/libsupermoon.so
+odm/lib64/libswregistrationalgo.so
 odm/lib64/libtfestriping.so;DISABLE_CHECKELF
 odm/lib64/libtunningmemhook.so;DISABLE_CHECKELF
 odm/lib64/libTrueSight.so;DISABLE_CHECKELF
@@ -1352,6 +1368,9 @@ odm/lib64/libwrapper_dlengine.so;DISABLE_CHECKELF
 odm/lib64/libXMFaceFocus.so
 odm/lib64/libxmi_hdr_checker.so
 odm/lib64/libxmi_slow_motion_mein.so
+
+# Camera vendor
+vendor/data/model/seg_quantized.serialized.8650.pertensor_512_cls3r.bin
 vendor/etc/camera/cameraopt_vendor.json
 vendor/lib64/libcameraopt.so
 vendor/lib64/libhalide_hexagon_host.so

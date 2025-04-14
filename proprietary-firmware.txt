@@ -19,7 +19,6 @@ shrm.img;AB
 tz.img;AB
 uefi.img;AB
 uefisecapp.img;AB
-vm-bootsys.img
 xbl.img;AB
 xbl_config.img;AB
 xbl_ramdump.img;AB
