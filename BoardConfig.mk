@@ -41,5 +41,8 @@ TARGET_OTA_ASSERT_DEVICE := houji,houjiin
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
 
+# SEPolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Inherit from the proprietary version
 include vendor/xiaomi/houji/BoardConfigVendor.mk

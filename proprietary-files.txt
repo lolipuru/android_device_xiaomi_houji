@@ -1454,6 +1454,7 @@ odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.defau
 odm/lib64/libgf_hal.so
 
 # RIL
+system_ext/framework/mirilhook.jar
 odm/etc/me_config.xml
 
 # Sensors

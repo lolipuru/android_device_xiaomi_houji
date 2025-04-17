@@ -5,4 +5,7 @@
 //
 
 soong_namespace {
+    imports: [
+        "vendor/xiaomi/sm8650-common",
+    ],
 }

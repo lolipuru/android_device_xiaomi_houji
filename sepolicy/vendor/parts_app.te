@@ -1,0 +1,17 @@
+type parts_app, domain;
+typeattribute parts_app mlstrustedsubject;
+
+app_domain(parts_app)
+
+binder_use(parts_app)
+
+allow parts_app {
+  radio_service
+  voiceinteraction_service
+}:service_manager find;
+
+allow parts_app system_app_data_file:dir create_dir_perms;
+allow parts_app system_app_data_file:{
+  file
+  lnk_file
+} create_file_perms;
