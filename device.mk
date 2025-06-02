@@ -27,4 +27,5 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     FrameworksResHouji \
     HoujiEuiccOverlay \
+    SettingsOverlayHouji \
     SystemUIResHouji
