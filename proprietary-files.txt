@@ -1446,6 +1446,9 @@ odm/etc/disp0/mdss_dsi_n3_42_0d_0a_dsc_cmd/miLutInfo.txt
 odm/etc/display/qdcm_calib_data_xiaomi_n3_42_0d_0a_cmd_mode_dsc_dsi_panel.json
 odm/etc/mdss_dsi_n3_42_0d_0a_dsc_cmd_mi.xml
 
+# Euicc - from shiba-user-15-BP1A.250405.005.B1-13151136-release-keys
+product/priv-app/EuiccGoogle/EuiccGoogle.apk|c792c42ba4cd171752d7ce5516a56ecb9858dc69
+
 # Fingerprint
 odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
 odm/lib64/libgf_hal.so

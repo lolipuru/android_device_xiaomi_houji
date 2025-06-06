@@ -12,6 +12,9 @@ $(call inherit-product, device/xiaomi/sm8650-common/common.mk)
 $(call inherit-product, vendor/xiaomi/houji/houji-vendor.mk)
 
 # Euicc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml
+
 PRODUCT_PACKAGES += \
     XiaomiEuicc
 

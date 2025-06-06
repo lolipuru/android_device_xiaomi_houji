@@ -6,3 +6,5 @@
 on post-fs && property:ro.boot.hwc=CN
     # Remove euicc stuffs on CN Variant
     mount none /dev/null /odm/overlay/HoujiEuiccOverlay.apk bind
+    mount none /dev/null /product/priv-app/EuiccGoogle/EuiccGoogle.apk bind
+    mount none /dev/null /product/etc/permissions/privapp-permissions-euiccgoogle.xml bind

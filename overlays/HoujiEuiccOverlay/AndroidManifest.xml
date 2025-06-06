@@ -10,5 +10,7 @@
     <overlay
         android:isStatic="true"
         android:priority="801"
-        android:targetPackage="android"/>
+        android:targetPackage="android"
+        android:requiredSystemPropertyName="ro.product.model"
+        android:requiredSystemPropertyValue="+(23127PN0CG)" />
 </manifest>
