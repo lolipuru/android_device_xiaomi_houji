@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Xiaomi 14 (OS1.0.12.0.UNCMIXM). 
+## are from Xiaomi 14 (OS2.0.200.13.VNCCNXM). 
 
 abl.img;AB
 aop.img;AB
