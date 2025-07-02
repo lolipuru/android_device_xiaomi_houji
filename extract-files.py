@@ -50,6 +50,8 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/hw/camera.qcom.so'
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
+    'odm/lib64/hw/camera.xiaomi.so': blob_fixup()
+        .replace_needed('libui.so', 'libui-v34.so'),
 }
 
 module = ExtractUtilsModule(
