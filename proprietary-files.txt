@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Xiaomi 14 (OS2.0.200.13.VNCCNXM)
+## are from Xiaomi 14 (OS2.0.201.0.VNCMIXM)
 
 # ACDB
 odm/etc/acdbdata/Tutu/Tutu_acdb_cal.acdb:odm/etc/acdbdata/pineapple_mtp/Tutu_acdb_cal.acdb
@@ -1105,11 +1105,11 @@ odm/lib64/camera/fdconfigvideo.bin
 odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/camera/libchxlogicalcameratable.so;DISABLE_CHECKELF
 
-# camera sensormodule (china variant)
-odm/lib64/camera/com.qti.sensormodule.houji_sunny_ovx9000_wide_ii.bin
-odm/lib64/camera/com.qti.sensormodule.houji_sunny_s5kjn1_tele_ii.bin
-odm/lib64/camera/com.qti.tuned.houji_sunny_ovx9000_wide_ii.bin
-odm/lib64/camera/com.qti.tuned.houji_sunny_s5kjn1_tele_ii.bin
+# camera sensormodule - from OS2.0.200.13.VNCCNXM
+odm/lib64/camera/com.qti.sensormodule.houji_sunny_ovx9000_wide_ii.bin|3d51fcb218b940af98b9d38bdce6f60d60e88ab3
+odm/lib64/camera/com.qti.sensormodule.houji_sunny_s5kjn1_tele_ii.bin|3e88b4b54da237a24add78003c15fb031b2171df
+odm/lib64/camera/com.qti.tuned.houji_sunny_ovx9000_wide_ii.bin|b06ba8f325d510d37ba021edd387c8fddd95bc76
+odm/lib64/camera/com.qti.tuned.houji_sunny_s5kjn1_tele_ii.bin|4514407007beffc716dc937a1a91bb40a5d54a2d
 
 # Camera Plugins
 odm/lib64/camera/plugins/com.xiaomi.plugin.anchor.so
