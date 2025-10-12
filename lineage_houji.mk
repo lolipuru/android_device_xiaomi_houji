@@ -22,9 +22,9 @@ PRODUCT_MODEL := 23127PN0CG
 PRODUCT_MANUFACTURER := xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc=$(call normalize-path-list, "houji houji 15 AQ3A.240627.003 OS2.0.201.0.VNCMIXM release-keys")
+    BuildDesc=$(call normalize-path-list, "houji houji 16 BP2A.250605.031.A3 OS3.0.0.2.WNCCNXM release-keys")
 
-BUILD_FINGERPRINT := Xiaomi/houji/houji:15/AQ3A.240627.003/OS2.0.201.0.VNCMIXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/houji/houji:16/BP2A.250605.031.A3/OS3.0.0.2.WNCCNXM:user/release-keys
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

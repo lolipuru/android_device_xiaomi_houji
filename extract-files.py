@@ -52,8 +52,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libprocessgroup_shim.so'),
     'odm/lib64/hw/camera.xiaomi.so': blob_fixup()
         .replace_needed('libui.so', 'libui-v34.so'),
-    'system_ext/framework/mirilhook.jar': blob_fixup()
-        .apktool_patch('blob-patches/mirilhook.patch'),
 }
 
 module = ExtractUtilsModule(
