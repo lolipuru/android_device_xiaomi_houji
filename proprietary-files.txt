@@ -2,8 +2,8 @@
 ## are from Xiaomi 14 (OS2.0.201.0.VNCMIXM)
 
 # ACDB
-odm/etc/acdbdata/Tutu/Tutu_acdb_cal.acdb:odm/etc/acdbdata/pineapple_mtp/Tutu_acdb_cal.acdb
-odm/etc/acdbdata/Tutu/Tutu_workspaceFileXml.qwsp:odm/etc/acdbdata/pineapple_mtp/Tutu_workspaceFileXml.qwsp
+odm/etc/acdbdata/Tutu/Tutu_acdb_cal.acdb:vendor/etc/acdbdata/pineapple_mtp/Tutu_acdb_cal.acdb
+odm/etc/acdbdata/Tutu/Tutu_workspaceFileXml.qwsp:vendor/etc/acdbdata/pineapple_mtp/Tutu_workspaceFileXml.qwsp
 
 # ADSP modules
 odm/etc/audio/misound_karaoke_res.bin
@@ -133,13 +133,6 @@ vendor/lib64/se_algo/libQnnHtpNetRunExtensions.so;MODULE_SUFFIX=_xiaomi
 vendor/lib64/se_algo/libQnnHtpV75Skel.so;MODULE_SUFFIX=_xiaomi
 vendor/lib64/se_algo/libQnnHtpV75Stub.so;MODULE_SUFFIX=_xiaomi
 vendor/lib64/se_algo/libQnnSystem.so;MODULE_SUFFIX=_xiaomi
-
-# Audio (Config)
-odm/etc/audio/sku_pineapple/mixer_paths_overlay_static.xml
-odm/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml
-odm/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
 
 # Audio firmware
 odm/firmware/B-cs35l41-dsp1-spk-cali.bin
