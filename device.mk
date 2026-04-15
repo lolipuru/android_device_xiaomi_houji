@@ -16,8 +16,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml
 
 PRODUCT_PACKAGES += \
-    XiaomiEuicc \
-    DeviceSettings
+    XiaomiEuicc
 
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 
