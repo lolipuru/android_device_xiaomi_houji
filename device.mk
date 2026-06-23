@@ -17,7 +17,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     XiaomiEuicc \
-    DeviceSettings
+    XiaomiEsimSwitcher
 
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 
