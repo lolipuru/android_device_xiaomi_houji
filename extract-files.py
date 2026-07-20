@@ -70,6 +70,7 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('xml=version', 'xml version'),
     (
         'odm/lib64/libcamxcommonutils.so',
+        'odm/lib64/libmialgoengine.so',
         'vendor/lib64/libcameraopt.so',
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
@@ -95,11 +96,6 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.graphics.allocator-V1-ndk.so',
             'android.hardware.graphics.allocator-V2-ndk.so'
         )
-        .replace_needed(
-            'libtinyxml2.so',
-            'libtinyxml2-v34.so'
-        )
-        .replace_needed('libui.so', 'libui-v34.so')
         .call(
             blob_fixup_graphic_buffer_size,
             [
@@ -132,6 +128,8 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock'),
     (
         'odm/lib64/camera/plugins/com.xiaomi.plugin.anchor.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.mialgoaiur.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.mialgosnsc.so',
     ): blob_fixup()
         .replace_needed(
             'libtinyxml2.so',
