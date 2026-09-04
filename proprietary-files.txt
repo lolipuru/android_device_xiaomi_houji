@@ -1011,6 +1011,7 @@ odm/lib64/camera/components/com.qti.node.memcpy.so
 odm/lib64/camera/components/com.qti.node.mlinference.so
 odm/lib64/camera/components/com.qti.node.ml.so
 odm/lib64/camera/components/com.qti.node.muxer.so
+odm/lib64/camera/components/com.qti.node.pixman.so
 odm/lib64/camera/components/com.qti.node.pixelstats.so
 odm/lib64/camera/components/com.qti.node.remosaic.so
 odm/lib64/camera/components/com.qti.node.seg.so
