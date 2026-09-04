@@ -61,6 +61,116 @@ def blob_fixup_graphic_buffer_size(
                 f.seek(int(offset[:-1], 16))
                 f.write(b'\x00\xa6\x81\x52')  # AArch64 mov w0, #0xd30
 
+def blob_fixup_mfnr_vendor_tag(
+    ctx: BlobFixupCtx,
+    file: File,
+    file_path: str,
+    *args,
+    **kwargs,
+):
+    offset = 0xed9d4
+
+    original = bytes.fromhex(
+        '40 FC FF D0 00 40 14 91'
+    )
+    patched = bytes.fromhex(
+        '00 FC FF B0 00 B0 09 91'
+    )
+
+    with open(file_path, 'rb+') as f:
+        f.seek(offset)
+        current = f.read(len(original))
+
+        if current == patched:
+            return
+
+        if current != original:
+            raise ValueError(
+                f'Unexpected camera.xiaomi.so data at 0x{offset:x}: '
+                f'{current.hex(" ")}'
+            )
+
+        f.seek(offset)
+        f.write(patched)
+
+def blob_fixup_fake_sat_sr_buffer_size(
+    ctx: BlobFixupCtx,
+    file: File,
+    file_path: str,
+    *args,
+    **kwargs,
+):
+    # Use the full-resolution FakeSat stream for super-resolution captures.
+    offset = 0xdf5dc
+    original = bytes.fromhex('22 00 80 52')  # mov w2, #1
+    patched = bytes.fromhex('62 00 80 52')   # mov w2, #3
+
+    with open(file_path, 'rb+') as f:
+        f.seek(offset)
+        current = f.read(len(original))
+
+        if current == patched:
+            return
+
+        if current != original:
+            raise ValueError(
+                f'Unexpected camera.xiaomi.so data at 0x{offset:x}: '
+                f'{current.hex(" ")}'
+            )
+
+        f.seek(offset)
+        f.write(patched)
+
+def blob_fixup_camera_reconfiguration_query(
+    ctx: BlobFixupCtx,
+    file: File,
+    file_path: str,
+    *args,
+    **kwargs,
+):
+    patches = (
+        (
+            0x47414,
+            bytes.fromhex(
+                '28 00 80 52 '  # mov w8, #1
+                '80 00 80 52'   # mov w0, #4
+            ),
+            bytes.fromhex(
+                '08 00 80 52 '  # mov w8, #0
+                '00 00 80 52'   # mov w0, #0
+            ),
+        ),
+        (
+            0x47460,
+            bytes.fromhex(
+                '80 00 80 52 '  # mov w0, #4
+                '28 00 80 52'   # mov w8, #1
+            ),
+            bytes.fromhex(
+                '00 00 80 52 '  # mov w0, #0
+                '08 00 80 52'   # mov w8, #0
+            ),
+        ),
+    )
+
+    with open(file_path, 'rb+') as f:
+        for offset, original, patched in patches:
+            f.seek(offset)
+            current = f.read(len(original))
+
+            if current == patched:
+                continue
+
+            if current != original:
+                raise ValueError(
+                    f'Unexpected camx.device-impl.so data at 0x{offset:x}: '
+                    f'{current.hex(" ")}'
+                )
+
+            f.seek(offset)
+            f.write(patched)
+
+
 blob_fixups: blob_fixups_user_type = {
     (
         'odm/etc/camera/enhance_motiontuning.xml',
@@ -78,6 +188,9 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libsnpe_config.so',
     ): blob_fixup()
         .add_needed('liblog.so'),
+
+    'odm/lib64/camx.device-impl.so': blob_fixup()
+        .call(blob_fixup_camera_reconfiguration_query),
 
     (
         'odm/lib64/hw/camera.qcom.so',
@@ -104,13 +217,26 @@ blob_fixups: blob_fixups_user_type = {
                 '_ZN5mihal9GraBufferC2EjjimPK13native_handle',
                 '_ZN5mihal9GraBufferC2EPKNS_6StreamEPK13native_handle',
             ],
+        )
+        .call(blob_fixup_mfnr_vendor_tag)
+        .call(blob_fixup_fake_sat_sr_buffer_size),
+
+    'odm/lib64/camera/components/com.mi.node.tsskinbeautifier.so': blob_fixup()
+        .call(
+            blob_fixup_graphic_buffer_size,
+            [
+                'ChiNodeEntry',
+            ],
         ),
     (
         'vendor/lib64/vendor.xiaomi.hardware.camera.injection-service.so',
         'vendor/lib64/vendor.xiaomi.hardware.camera.injection-V1-ndk.so',
         'vendor/lib64/vendor.xiaomi.hardware.camera.injection-client.so',
     ): blob_fixup()
-        .replace_needed('android.hardware.camera.device-V1-ndk.so', 'android.hardware.camera.device-V2-ndk.so'),
+        .replace_needed(
+            'android.hardware.camera.device-V1-ndk.so',
+            'android.hardware.camera.device-V2-ndk.so'
+        ),
     (
         'odm/lib64/libAncHumanVideoBokehV4.so',
         'odm/lib64/libTrueSight.so',
@@ -226,8 +352,6 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/com.qualcomm.mcx.nonlinearmapper.so',
         'odm/lib64/com.qualcomm.mcx.policy.mfl.so',
         'odm/lib64/com.qualcomm.qti.mcx.usecase.extension.so',
-        'odm/lib64/com.xiaomi.camx.hook.so',
-        'odm/lib64/com.xiaomi.chi.hook.so',
         'odm/lib64/hw/camera.qcom.sm8650.so',
         'odm/lib64/hw/com.qti.chi.offline.so',
         'odm/lib64/libcamerapostproc.so',
